@@ -2,6 +2,10 @@
 from time import sleep
 import os
 
+##################################- VARIABLES -##################################
+yes = ['Y', 'YES', '1']
+no = ['N', 'NO', '0']
+
 ##################################- MAIN -##################################
 def main():
     clear_screen()
@@ -33,9 +37,9 @@ def timer(seconds):
 def choose():
     while True:
         choice = input('Do you want to continue?(Y/N) ').upper().strip()
-        if choice in ['Y', 'YES', '1']:
+        if choice in yes:
             main()
-        elif choice in ['N', 'NO', '0']:
+        elif choice in no:
             clear_screen()
             print('=-=-=-=- GOODBYE -=-=-=-=')
             break
